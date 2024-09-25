@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./main.js" defer></script>
+    <script src="./app.js" defer></script>
+    <title>Learning Web Components</title>
+  </head>
+  <body>
+    <!-- Lesson 1 -->
+    <hello-world text="Hello World!" color="red">
+      <p>This is a paragraph</p>
+    </hello-world>
+
+    <!-- Next Lesson 2 -->
+    <todo-item checked="true">
+      Todo 1
+      <span slot="description">Small Text</span>
+    </todo-item>
+    <todo-item> Todo 2 </todo-item>
+    <todo-item> Todo 3 </todo-item>
+
+    <ul is="expandable-list" data-expanded>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <ul is="expandable-list" data-expanded>
+        <li>Item 2.1</li>
+        <li>Item 2.2</li>
+      </ul>
+    </ul>
+
+    <br />
+
+    <!-- Next Lesson 3 -->
+    <big-bang character="Leonard" color="cornflowerblue" action="Goodbye">
+      <h2 slot="title">It all started with...</h2>
+      <span slot="done">OK</span>
+    </big-bang>
+    <br />
+
+    <!-- Next Lesson 4 -->
+    <h2>Page Title</h2>
+    <sample-component>
+      <h3 slot="title">Hello from the Sample Component</h3>
+    </sample-component>
+    <br />
+
+    <!-- Progress Bar -->
+    <progress-bar percent="50"></progress-bar>
+    <br />
+
+    <!-- Counter -->
+    <h2>Counter</h2>
+    <my-counter count="5"></my-counter>
+    <br />
+
+    <!-- my-reactive-counter -->
+    <h2>Counter with Reactive</h2>
+    <my-reactive-counter></my-reactive-counter>
+  </body>
+</html>
